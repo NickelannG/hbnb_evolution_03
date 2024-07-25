@@ -8,12 +8,18 @@ hbnb = {
         // set up the onclick events for the Amenities radios + button
         let amenRadios = document.querySelectorAll("#menu >.contents >.amenities >.choice input[type='radio']");
         for (let elem of amenRadios) {
+            // add a change event to each button when a diff button is selected
             elem.addEventListener("change", function(e) {
+                // selects element within the titles of amenities part of the menu contents
+                // in turn, assigned to variable 'specificSelectedText'
             let specificSelectedText = document.querySelector("#menu >.contents >.amenities >.title .selected")
-            
+            // grab value of radio button that made the change event
                 let radioValue = e.target.value
+                // if you the button you chose is labeled 'specific'
                 if (radioValue == 'specific') {
+                    //Show submenu of specific radio button
                     hbnb.showSpecificAmenitiesSubmenu();
+                    // 
                     hbnb.updateSpecificAmenitiesCount();
                     specificSelectedText.setAttribute('state', 'show');
                 } else {
@@ -56,6 +62,7 @@ hbnb = {
         // I have set up the CSS in a certain way so that the submenu is shown / hidden
         // depending on the 'state' parameter's value in #amenities-submenu
         let submenu = document.querySelector("#amenities-submenu")
+        // changes the "state" to a "show" attribute (revealing the submenu)
         submenu.setAttribute("state", 'show')
     },
     hideSpecificAmenitiesSubmenu: function() {
@@ -72,7 +79,7 @@ hbnb = {
                 checkedCount++
             }
         }
-
+        // set the count of the innerHTML property
         specificCount.innerHTML = checkedCount
     },
     init: function() {
