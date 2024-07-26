@@ -36,8 +36,8 @@ body {
 }
 
 .header-logo {
-  width: 140px;
-  height: 40px;
+  width: 70px;
+  height: 50px;
   background-image: url("../img/logo_bnb.png");
   background-size: cover;
   background-repeat: no-repeat;
