@@ -38,11 +38,9 @@ body {
 .header-logo {
   width: 140px;
   height: 40px;
-  background-color: #000;
-  background-image: url("../img/forrest.png");
+  background-image: url("../img/favicon.ico");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .container {
