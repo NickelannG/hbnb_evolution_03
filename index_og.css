@@ -3,6 +3,10 @@ html, body {
   padding: 0 0 30px 0;
   font-family: "Josefin Sans", sans-serif;
   font-size: 10px;
+  background: url("../static/img/forrest.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 button {
@@ -12,13 +16,6 @@ button {
 body[js=off] #no-js {
   display: flex;
   z-index: 9999;
-}
-
-body {
-  background-image: url("../img/forrest.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 #no-js {
@@ -35,20 +32,14 @@ body {
   display: none;
 }
 
-.header-logo {
-  width: 140px;
-  height: 40px;
-  background-color: #000;
-  background-image: url("../img/forrest.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
 .container {
   width: 960px;
   margin-left: auto;
   margin-right: auto;
+  background: url("../static/img/forrest.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 #menu {
