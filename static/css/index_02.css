@@ -1,18 +1,23 @@
 html, body {
   margin: 0;
   padding: 0 0 30px 0;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: inter;
   font-size: 10px;
-  background-color: #FFF;
 }
 
 button {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: inter;
 }
 
 body[js=off] #no-js {
   display: flex;
   z-index: 9999;
+}
+
+body {
+  background-image: url("../img/forrest.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #no-js {
@@ -29,53 +34,36 @@ body[js=off] #no-js {
   display: none;
 }
 
-header {
-  width: 100%;
-  border-bottom: 2px solid #C5C5FF;
-  padding: 10px;
-  display: flex;
-  box-sizing: border-box;
+.header-logo {
+  width: 224px;
+  height: 153px;
+  background-image: url("../img/logo_bnb.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 47px;
+  left: -220px;
 }
-header .content {
-  flex: 1;
+
+header a {
+  color: #FBFBFB;
+  text-decoration-line: none;
 }
-header .content .title {
-  font-size: 36px;
-  font-weight: 700;
-  font-style: italic;
+header a:hover {
+  color: #808691;
 }
-header .content .subtitle {
-  font-size: 24px;
-  padding-left: 5px;
-}
-header .status {
-  background-color: #F5F5F5;
-  border-radius: 5px;
-  padding: 5px;
-  border: 1px solid #CCC;
-  display: flex;
-  align-items: center;
-}
-header .status > .txt {
-  padding: 0 5px;
-  font-size: 1.4rem;
-}
-header .status > .bubble {
-  width: 30px;
-  height: 30px;
-  border-radius: 20px;
-  display: block;
-}
-header .status > .bubble.ok {
-  background-color: green;
-}
-header .status > .bubble.down {
-  background-color: red;
+
+.container {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #menu {
   width: 100%;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 0) 100%);
+  position: relative;
+  top: 600px;
 }
 #menu .contents {
   margin: 0 auto;
@@ -230,6 +218,8 @@ header .status > .bubble.down {
   width: 100%;
   padding: 40px 0;
   text-align: center;
+  position: relative;
+  top: 400px;
 }
 #results > .listings > .country_group {
   background-color: rgba(0, 0, 0, 0.1);
@@ -337,182 +327,56 @@ footer {
   box-sizing: border-box;
 }
 
-.admin-data {
-  min-height: 250px;
-  padding: 5px;
-  margin: 5px;
-  display: inline-block;
-  background-color: #F5F5F5;
-  overflow: hidden;
+.navbar-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  top: -80px;
+  left: 50px;
+  color: #FBFBFB;
 }
-.admin-data.places-amenities .header span:nth-child(1), .admin-data.places-amenities .row span:nth-child(1) {
-  width: 200px;
+.navbar-menu .nav {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  font-family: inter;
+  font-size: 20px;
+  color: #FBFBFB;
 }
-.admin-data.places-amenities .header span:nth-child(2), .admin-data.places-amenities .row span:nth-child(2) {
-  width: 120px;
+.navbar-menu .nav-item {
+  margin: 0 15px;
+  font-family: inter;
+  color: #FBFBFB;
 }
-.admin-data.places-amenities form span:nth-child(1) {
-  flex: 1;
+.navbar-menu .nav-link {
+  text-decoration: none;
+  color: #FBFBFB;
+  padding: 5px 10px;
+  font-family: inter;
+  font-size: 20px;
 }
-.admin-data.places-amenities form span:nth-child(2) {
-  flex: 1;
+
+.nav .nav-link:hover {
+  color: #808691;
 }
-.admin-data.places-amenities form select {
+.nav .nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0.2rem;
+}
+.nav .nav-item:hover .nav-link::before {
   width: 100%;
-  padding: 5px;
 }
-.admin-data.amenities span:nth-child(1) {
-  width: 100px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow-x: clip;
-}
-.admin-data.amenities span:nth-child(2) {
-  width: 100px;
-}
-.admin-data.cities span:nth-child(1) {
-  width: 100px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow-x: clip;
-}
-.admin-data.cities span:nth-child(2) {
-  width: 120px;
-}
-.admin-data.countries .header span:nth-child(1), .admin-data.countries .row span:nth-child(1) {
-  width: 100px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow-x: clip;
-}
-.admin-data.countries .header span:nth-child(2), .admin-data.countries .row span:nth-child(2) {
-  width: 120px;
-}
-.admin-data.countries .header span:nth-child(3), .admin-data.countries .row span:nth-child(3) {
-  width: 60px;
-}
-.admin-data.countries form span:nth-child(1) {
-  flex: 2;
-}
-.admin-data.countries form span:nth-child(2) {
-  flex: 1;
-}
-.admin-data.places span:nth-child(1) {
-  width: 100px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow-x: clip;
-}
-.admin-data.places span:nth-child(2) {
-  width: 150px;
-}
-.admin-data.places span:nth-child(3) {
-  width: 220px;
-}
-.admin-data.places span:nth-child(4) {
-  width: 330px;
-}
-.admin-data.places span:nth-child(5) {
-  width: 50px;
-}
-.admin-data.places span:nth-child(6), .admin-data.places span:nth-child(7) {
-  width: 80px;
-}
-.admin-data.places span:nth-child(8) {
-  width: 50px;
-}
-.admin-data.places span:nth-child(9), .admin-data.places span:nth-child(10) {
-  width: 70px;
-}
-.admin-data.reviews span:nth-child(1) {
-  width: 100px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow-x: clip;
-}
-.admin-data.reviews span:nth-child(2) {
-  width: 100px;
-}
-.admin-data.reviews span:nth-child(3) {
-  width: 120px;
-}
-.admin-data.users span:nth-child(1) {
-  width: 100px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow-x: clip;
-}
-.admin-data.users span:nth-child(2) {
-  width: 100px;
-}
-.admin-data.users span:nth-child(3) {
-  width: 100px;
-}
-.admin-data.users span:nth-child(4) {
-  width: 250px;
-}
-.admin-data.users span:nth-child(5) {
-  width: 100px;
-}
-.admin-data > .title {
-  font-size: 2.6rem;
-  padding: 5px;
-  margin-bottom: 10px;
-  background-color: #E5E5E5;
-}
-.admin-data > .header {
-  font-size: 0;
-  border-bottom: 2px solid #CCC;
-  font-weight: bold;
-}
-.admin-data > .header > span {
-  display: inline-block;
-}
-.admin-data > .rows {
-  height: 178px;
-  overflow-y: scroll;
-}
-.admin-data > .rows > .row {
-  font-size: 0;
-  display: flex;
-}
-.admin-data > .rows > .row:nth-child(2n+2) {
-  background-color: #D5D5D5;
-}
-.admin-data > .header > span, .admin-data > .rows > .row > span {
-  padding: 5px;
-  font-size: 1.4rem;
-  align-content: center;
-}
-.admin-data > .header > span:not(:nth-child(1)), .admin-data > .rows > .row > span:not(:nth-child(1)) {
-  border-left: 1px solid #CCC;
-}
-.admin-data > form {
-  min-height: 95px;
-  border-top: 2px solid #CCC;
-  background-color: #E5E5E5;
-  padding: 10px 5px 5px 5px;
-}
-.admin-data > form > .title {
-  font-size: 1.6rem;
-}
-.admin-data > form > .fields {
-  display: flex;
-}
-.admin-data > form > .fields > span {
-  padding: 5px 10px 5px 0;
-}
-.admin-data > form > .fields input[type=text] {
-  padding: 5px;
-  width: calc(100% - 10px);
-}
-.admin-data > form > .submit {
-  text-align: right;
-  padding-right: 10px;
-}
-.admin-data > form > .submit > button {
-  padding: 5px 20px;
-  font-size: 1.6rem;
+
+ul.row {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /*# sourceMappingURL=index_02.css.map */
