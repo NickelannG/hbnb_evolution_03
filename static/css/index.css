@@ -45,6 +45,15 @@ body {
   left: -220px;
 }
 
+.header a {
+  color: #FBFBFB;
+  text-decoration-line: none;
+}
+
+.header a:hover {
+  color: #808691;
+}
+
 .container {
   width: 960px;
   margin-left: auto;
