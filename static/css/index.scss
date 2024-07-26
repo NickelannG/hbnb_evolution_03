@@ -20,6 +20,8 @@ body {
     background-image: url("../img/forrest.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
   }
 
 #no-js {
@@ -401,7 +403,7 @@ footer {
     align-items: center;
     position: relative;
     top: -80px;
-    left: 50px;
+    left: 60px;
     color: #FBFBFB;
 
     .nav {
@@ -410,7 +412,7 @@ footer {
         padding: 0;
         margin: 0;
         font-family: inter;
-        font-size: 20px;
+        font-size: 25px;
         color: #FBFBFB;
     }
     
@@ -425,7 +427,7 @@ footer {
         color: #FBFBFB;
         padding: 5px 10px;
         font-family: inter;
-        font-size: 20px;
+        font-size: 25px;
 
 
     }
@@ -462,4 +464,110 @@ ul.row {
     margin: 0;
     padding: 0;
     list-style: none;
-  }
+}
+
+.section-hero {
+    .hero-title {
+        margin-top: 5rem;
+        color: #FBFBFB;
+        font-family: inter;
+        font-size: 60px;
+        font-weight: 550;
+    }
+
+    .hero-inner {
+        position: relative;
+        top: 500px;
+        left: 355px;
+        width: 400px;
+    }
+    
+    .hero-para {
+        color: #FBFBFB;
+        font-family: inter;
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 40px;
+    }
+
+    .hero-outer {
+        position: relative;
+        top: 500px;
+        left: 355px;
+        width: 470px;
+    }
+}
+
+.section-dest {
+    margin: 0 auto;
+    width: 100%;
+    background-color: #3E2411;
+    height: 500px;
+    position: relative;
+    top: 750px;
+    justify-content: center;
+
+    .dest-body {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+
+        .searching-title {
+            color: #FBFBFB;
+            font-family: Inter, sans-serif;
+            font-weight: 550;
+            margin: 0;
+            position: relative;
+            z-index: 3;
+            margin-top: 30px;
+            font-size: 60px;
+        }
+    }
+
+    .dest-inner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+    }
+}
+
+.section-amenities {
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 50px;
+    background-color: #D3CBC8;
+    height: 500px;
+    position: relative;
+    top: 750px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .amenities-body {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+
+        .amenities-title {
+            color: #FBFBFB;
+            font-family: Inter, sans-serif;
+            font-weight: 550;
+            margin: 0;
+            position: relative;
+            z-index: 3;
+            margin-top: 0;
+            font-size: 60px;
+        }
+    }
+
+    .amenities-inner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+    }
+}
