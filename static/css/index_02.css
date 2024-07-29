@@ -81,6 +81,23 @@ header a:hover {
   flex: 7;
   margin-bottom: 20px;
 }
+#menu .contents > .destination .images {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+#menu .contents > .destination .images .image-wrapper {
+  width: 500px;
+  height: 80px;
+  border: 1px solid #999;
+  border-radius: 8px;
+  overflow: hidden;
+}
+#menu .contents > .destination .images .image-wrapper img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+}
 #menu .contents > .amenities {
   margin-left: 20px;
   flex: 4;
@@ -160,7 +177,7 @@ header a:hover {
 
 #amenities-submenu {
   width: 280px;
-  background-color: #E5E5E5;
+  background-color: #D3CBC8;
   padding: 10px;
   border-radius: 3px;
   top: 30px;
@@ -419,11 +436,12 @@ ul.row {
 
 .section-dest {
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   background-color: #3E2411;
   height: 700px;
   position: relative;
   top: 510px;
+  border-radius: 70px;
 }
 .section-dest .dest-body {
   text-align: center;
@@ -450,16 +468,17 @@ ul.row {
 
 .section-amenities {
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   padding-top: 50px;
-  background-color: #D3CBC8;
-  height: 700px;
+  background-color: #855F43;
+  height: 600px;
   position: relative;
   top: 510px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  border-radius: 70px;
 }
 .section-amenities .amenities-body {
   text-align: center;
