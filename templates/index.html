@@ -31,22 +31,22 @@
         </section>
     </section>
     <!--Destination-->
-    <section class="section-dest">
-        <div class="dest-body">
-            <section class="dest-inner">
-                <h2 class="searching-title">Start Searching</h2>
-            </section>
-        </div>
-    </section>
-    <!--Amenities-->
-    <section class="section-amenities">
-        <div class="amenities-body">
-            <section class="amenities-inner">
-                <h2 class="amenities-title">Amenities</h2>
-            </section>
-        </div>
-    </section>
+    <!--<section class="section-dest">
+    <!--    <div class="dest-body">-->
+    <!--        <section class="dest-inner">-->
+    <!--            <h2 class="searching-title">Start Searching</h2>-->
+    <!--        </section>-->
+    <!--    </div>-->
+    <!--</section>-->
     <section id="menu">
+        <!--Destination-->
+        <section class="section-dest">
+            <div class="dest-body">
+                <section class="dest-inner">
+                    <h2 class="searching-title">Start Searching</h2>
+                </section>
+            </div>
+        </section>
         <form class="contents" action="/" method="post">
             <div class="destination">
                 <div class="title">Destination</div>
@@ -83,6 +83,18 @@
                     {% endfor %}
                 </div>
             </div>
+        </form>
+    </section>
+    <section id="menu">
+        <!--Amenities-->
+        <section class="section-amenities">
+            <div class="amenities-body">
+                <section class="amenities-inner">
+                    <h2 class="amenities-title">Amenities</h2>
+                </section>
+            </div>
+        </section>
+        <form class="contents" action="/" method="post">
             <div class="amenities">
                 <div class="title">
                     <span class="text">Amenities</span>
@@ -92,10 +104,10 @@
                     </span>
                 </div>
                 <div class="choice">
-                    <!-- Same as with the destination radio inputs, we re-select what was previously selected during form submission -->
-                    {% set all_amen_checked = "checked" %}
-                    {% set specific_amen_checked = "" %}
-                    {% if selected and "amenities" in selected %}
+                        <!-- Same as with the destination radio inputs, we re-select what was previously selected during form submission -->
+                        {% set all_amen_checked = "checked" %}
+                        {% set specific_amen_checked = "" %}
+                        {% if selected and "amenities" in selected %}
                         {% if selected["amenities"] != "" and selected["amenities"]|length > 0 %}
                             {% set all_amen_checked = "" %}
                             {% set specific_amen_checked = "checked" %}
