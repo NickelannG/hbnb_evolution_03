@@ -11,13 +11,13 @@ from models.user import User
 app = Flask(__name__)
 app.register_blueprint(api_routes)
 
-COUNTRY_IMAGES = {
-    "CA": "../static/img/canada.png",
-    "NZ": "../static/img/nz.png",
-    "SG": "../static/img/singapore.png",
-    "AU": "../static/img/australia.png",
-    "MY": "../static/img/malaysia.png",
-}
+# COUNTRY_IMAGES = {
+#     "CA": "../static/img/canada.png",
+#     "NZ": "../static/img/nz.png",
+#     "SG": "../static/img/singapore.png",
+#     "AU": "../static/img/australia.png",
+#     "MY": "../static/img/malaysia.png",
+# }
 
 @app.route('/')
 def index():
@@ -28,16 +28,16 @@ def index():
     countries = Country.all(True)
     amenities = Amenity.all(True)
 
-    country_data = [
-        {
-            "code": country.code,
-            "name": country.name,
-            "image_url": COUNTRY_IMAGES.get(country.code, "../static/img/all.png")
-        }
-        for country in countries
-    ]
+    # country_data = [
+    #     {
+    #         "code": country.code,
+    #         "name": country.name,
+    #         "image_url": COUNTRY_IMAGES.get(country.code, "../static/img/all.png")
+    #     }
+    #     for country in countries
+    # ]
 
-    return render_template('index.html', countries=country_data, amenities=amenities)
+    return render_template('index.html', countries=countries, amenities=amenities)
 
 # This endpoint is meant to handle the data submitted by the 'traditional' form post that I have included in the sample HTML
 @app.route('/', methods=["POST"])

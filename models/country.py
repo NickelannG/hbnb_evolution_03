@@ -308,9 +308,11 @@ class Country(Base):
             where_and = " AND "
 
         # If a specific country was selected
-        if country_code != "":
+        if country_code is None:
+            print(f"country_code: {country_code}")
+        else:
             query_txt = query_txt + where_and + "co.code = '" + country_code + "'"
-
+        
         # Subquery complete!
         # Now, let's wrap it in the bigger GROUP BY query
         # Note that the subquery is given an alias. This is required
